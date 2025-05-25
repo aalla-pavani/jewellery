@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a.active hr{
+    display: block;
+}
+
+*{
+    font-family: Outfit;
+}
+
+.prata-regular{
+    font-family: "Prata",serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.navbar-heading {
+    font-family: 'Georgia', serif; /* Or use another classic font */
+    font-size: 1rem; /* Adjust as needed */
+    font-weight: 500; /* Slightly bold for emphasis */
+    color: #333333; /* Dark color for a classic look */
+}
+
+@keyframes rotate3D {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+img.generated-image {
+    animation: rotate3D 10s infinite linear;
+}
