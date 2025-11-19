@@ -160,6 +160,73 @@ open git
 ->open web hook
 greeeen colour in web hook and jenkins
 
+**GOOGLE TWO STEP**
+Go to: https://myaccount.google.com
+ii. Enable 2-Step Verification
+Navigate to:
+oSecurity → 2-Step Verification
+oTurn it ON
+oComplete the OTP verification process (via phone/email)
+iii. Generate App Password for Jenkins
+Go to:
+oSecurity → App passwords
+Select:
+oApp: Other (Custom name)
+oName: Jenkins-Demo
+Click Generate
+Copy the 16-digit app password
+oSave it in a secure location (e.g., Notepad)
+                 2.  Jenkins Plugin Installation
+i. Open Jenkins Dashboard
+ii. Navigate to:
+Manage Jenkins → Manage Plugins
+iii. Install Plugin:
+Search for and install:
+oEmail Extension Plugin
+
+3. Configure Jenkins Global Email Settings
+i. Go to:
+Manage Jenkins → Configure System
+
+A. E-mail Notification Section
+Field	Value
+SMTP Server	smtp.gmail.com
+Use SMTP Auth	✅ Enabled
+User Name	Your Gmail ID (e.g., archanareddykmit@gmail.com)
+Password	Paste the 16-digit App Password
+Use SSL	✅ Enabled
+SMTP Port	465
+Reply-To Address	Your Gmail ID (same as above)
+➤ Test Configuration
+Click: Test configuration by sending test e-mail
+Provide a valid email address to receive a test mail
+✅ Should receive email from Jenkins
+
+B. Extended E-mail Notification Section
+Field	Value
+SMTP Server	smtp.gmail.com
+SMTP Port	465
+Use SSL	✅ Enabled
+Credentials	Add Gmail ID and App Password as Jenkins credentials
+Default Content Type	text/html or leave default
+Default Recipients	Leave empty or provide default emails
+Triggers	Select as per needs (e.g., Failure)
+
+4.  Configure Email Notifications for a Jenkins Job
+i. Go to:
+Jenkins → Select a Job → Configure
+
+ii. In the Post-build Actions section:
+Click: Add post-build action → Editable Email Notification
+A. Fill in the fields:
+Field	Value
+Project Recipient List	Add recipient email addresses (comma-separated)
+Content Type	Default (text/plain) or text/html
+Triggers	Select events (e.g., Failure, Success, etc.)
+Attachments	(Optional) Add logs, reports, etc.
+
+iii. Click Save
+
 **AWS**
 open aws acedamy
 press green button(Aws)
