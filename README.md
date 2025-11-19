@@ -1,3 +1,36 @@
+**WEEK 9**
+pipeline {
+    agent any
+    tools {
+        maven 'MAVEN-HOME'
+    }
+    stages {
+        stage('git repo & clean') {
+            steps {
+                bat '''
+                    rmdir /s /q project 2>nul || echo no old folder
+                    git clone https://github.com/aalla-pavani/project.git
+                    mvn clean -f project/pom.xml
+                '''
+            }
+        }
+        stage('install') {
+            steps {
+                bat 'mvn install -f project/pom.xml'
+            }
+        }
+        stage('test') {
+            steps {
+                bat 'mvn test -f project/pom.xml'
+            }
+        }
+        stage('package') {
+            steps {
+                bat 'mvn package -f project/pom.xml'
+            }
+        }
+    }
+}
 **WEEK 10**
 minikube start
 kubectl create deployment mynginx --image=nginx
