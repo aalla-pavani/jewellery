@@ -63,7 +63,7 @@ docker stop nagiosdemo
 docker rm nagiosdemo
 docker images
 docker rmijasonrivers/nagios:latest
-**Week 11**
+**Week 12**
 open aws acedamy
 press green button(Aws)
 open EC2->Launch instance
