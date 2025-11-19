@@ -1,14 +1,19 @@
 **#maven java automation**
 Maven Java Automation Steps:
+
  Step 1: Open Jenkins (localhost:8080)
-   	 ├── Click on "New Item" (left side menu
+   	
+	 ├── Click on "New Item" (left side menu
 Step 2: Create Freestyle Project (e.g., MavenJava_Build)
-        	├── Enter project name (e.g., MavenJava_Build)
+ 
+			├── Enter project name (e.g., MavenJava_Build)
         	├── Click "OK"
 └── Configure the project:
-            		├── Description: "Java Build demo"
+ 
+					├── Description: "Java Build demo"
             		├── Source Code Management:
-            			└── Git repository URL: [GitMavenJava repo URL]
+         
+						└── Git repository URL: [GitMavenJava repo URL]
             		├── Branches to build: */Main   or  */master
   		└── Build Steps:
                	     ├── Add Build Step -> "Invoke top-level Maven targets"
@@ -22,10 +27,9 @@ Step 2: Create Freestyle Project (e.g., MavenJava_Build)
                     			└── Files to archive: */
                     	     ├── Add Post Build Action -> "Build other projects"
                     			└── Projects to build: MavenJava_Test
-                    			└── Trigger: Only if build is stable
+         
+								└── Trigger: Only if build is stable
                     	     └── Apply and Save
-
-
     └── Step 3: Create Freestyle Project (e.g., MavenJava_Test)
         	├── Enter project name (e.g., MavenJava_Test)
         	├── Click "OK"
