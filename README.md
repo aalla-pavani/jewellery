@@ -63,6 +63,33 @@ docker stop nagiosdemo
 docker rm nagiosdemo
 docker images
 docker rmijasonrivers/nagios:latest
+
+**week 11**
+https://ngrok.com
+download for windows
+copy token (ngrok config add-authtoken 35h4iXUDZeteX0x4M6VTAB1uHze_81s2w7u267bUcZbcwrd6t)
+open file in file exploler 
+->paste above token(ngrok config add-authtoken 35h4iXUDZeteX0x4M6VTAB1uHze_81s2w7u267bUcZbcwrd6t)
+->ngork http 8081
+->copy forwarding url (https://coralie-seminomadic-critically.ngrok-free.dev)
+
+git->repository->settings->
+web-hook->URL(https://coralie-seminomadic-critically.ngrok-free.dev/git-webhook)
+	->/json
+create
+
+open Jenkins
+->open a pipeline/free-style
+-> add GitHub hook trigger in trigger
+->apply and save
+->build now
+
+open git
+->pom.xml change code
+->commit
+->open web hook
+greeeen colour in web hook and jenkins
+
 **Week 12**
 open aws acedamy
 press green button(Aws)
