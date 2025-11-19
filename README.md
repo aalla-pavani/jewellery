@@ -1,4 +1,4 @@
-**WEEK 9**
+**PIPELINE**
 pipeline {
     agent any
     tools {
@@ -31,7 +31,7 @@ pipeline {
         }
     }
 }
-**WEEK 10**
+**MINICUBE**
 minikube start
 kubectl create deployment mynginx --image=nginx
 if already created then 
@@ -64,7 +64,7 @@ docker rm nagiosdemo
 docker images
 docker rmijasonrivers/nagios:latest
 
-**week 11**
+**WEBHOOK**
 https://ngrok.com
 download for windows
 copy token (ngrok config add-authtoken 35h4iXUDZeteX0x4M6VTAB1uHze_81s2w7u267bUcZbcwrd6t)
@@ -90,7 +90,7 @@ open git
 ->open web hook
 greeeen colour in web hook and jenkins
 
-**Week 12**
+**AWS**
 open aws acedamy
 press green button(Aws)
 open EC2->Launch instance
