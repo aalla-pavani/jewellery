@@ -112,6 +112,7 @@ kubectl describe pods
 kubectl expose deployment mynginx --type=NodePort --port=80 --target-port=80
 kubectl scale deployment mynginx --replicas=4
 kubectl get svc
+kubectl delete svc mynginx4
 kubectl get service mynginx
 kubectl port-forward svc/mynginx 8081:80
 minikube tunnel
